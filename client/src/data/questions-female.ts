@@ -28,21 +28,21 @@ export const femaleQuestions: Question[] = [
         en: "Classic and elegant",
         ja: "クラシックでエレガント",
         zh: "经典优雅",
-        weights: { "CHANEL": 5, "DIOR": 5, "HERMÈS": 4, "THE_ROW": 4, "BOTTEGA_VENETA": 3 }
+        weights: { "CHANEL": 5, "DIOR": 5, "HERMÈS": 4, "BURBERRY": 4, "RALPH_LAUREN": 3 }
       },
       {
         ko: "트렌디하고 페미닌",
         en: "Trendy and feminine",
         ja: "トレンディでフェミニン",
         zh: "时尚女性化",
-        weights: { "ZARA": 5, "HM": 4, "MANGO": 4, "GANNI": 3, "JACQUEMUS": 3 }
+        weights: { "ZARA": 5, "MANGO": 5, "HM": 4, "COS": 3, "ARKET": 3 }
       },
       {
         ko: "캐주얼하고 편안한",
         en: "Casual and comfortable",
         ja: "カジュアルで快適",
         zh: "休闲舒适",
-        weights: { "UNIQLO": 5, "GAP": 4, "MUJI": 4, "LULULEMON": 3, "ARKET": 3 }
+        weights: { "UNIQLO": 5, "GAP": 4, "MUJI": 4, "LEVI": 3, "NIKE": 3 }
       },
       {
         ko: "독창적이고 아방가르드",
@@ -65,7 +65,7 @@ export const femaleQuestions: Question[] = [
         en: "Very frequently (5+ times per week)",
         ja: "非常に頻繁に（週5回以上）",
         zh: "非常频繁（每周5次以上）",
-        weights: { "DIOR": 5, "CHANEL": 4, "GANNI": 4, "JACQUEMUS": 4, "KHAITE": 3 }
+        weights: { "DIOR": 5, "CHANEL": 5, "MANGO": 4, "ZARA": 3, "HM": 3 }
       },
       {
         ko: "가끔 (특별한 날)",
@@ -79,14 +79,14 @@ export const femaleQuestions: Question[] = [
         en: "Rarely wear",
         ja: "ほとんど着ない",
         zh: "很少穿",
-        weights: { "UNIQLO": 4, "LEVI": 4, "GAP": 3, "ACNE_STUDIOS": 3, "COS": 3 }
+        weights: { "UNIQLO": 5, "LEVI": 4, "GAP": 4, "MUJI": 3, "COS": 3 }
       },
       {
         ko: "전혀 안 입음 (바지 위주)",
         en: "Never (prefer pants)",
         ja: "全く着ない（パンツ中心）",
         zh: "从不穿（偏爱裤装）",
-        weights: { "ACNE_STUDIOS": 4, "LEMAIRE": 4, "THE_ROW": 3, "COS": 3, "TOTEME": 3 }
+        weights: { "ACNE_STUDIOS": 5, "COS": 4, "UNIQLO": 3, "ARKET": 3, "MUJI": 3 }
       }
     ]
   },
@@ -102,21 +102,21 @@ export const femaleQuestions: Question[] = [
         en: "High heels/Pumps",
         ja: "ハイヒール/パンプス",
         zh: "高跟鞋",
-        weights: { "CHRISTIAN_LOUBOUTIN": 5, "JIMMY_CHOO": 4, "MANOLO_BLAHNIK": 4, "GIANVITO_ROSSI": 3, "SAINT_LAURENT": 3 }
+        weights: { "CHANEL": 5, "DIOR": 5, "GUCCI": 4, "PRADA": 4, "HERMÈS": 3 }
       },
       {
         ko: "플랫 슈즈/발레리나",
         en: "Flats/Ballet shoes",
         ja: "フラットシューズ/バレエシューズ",
         zh: "平底鞋/芭蕾舞鞋",
-        weights: { "REPETTO": 5, "CHANEL": 4, "TORY_BURCH": 3, "FERRAGAMO": 3, "PRADA": 3 }
+        weights: { "CHANEL": 4, "COS": 4, "ARKET": 3, "UNIQLO": 3, "MUJI": 3 }
       },
       {
         ko: "스니커즈",
         en: "Sneakers",
         ja: "スニーカー",
         zh: "运动鞋",
-        weights: { "GOLDEN_GOOSE": 4, "VEJA": 4, "COMMON_PROJECTS": 3, "NIKE": 3, "VANS": 3 }
+        weights: { "NIKE": 5, "ADIDAS": 5, "CONVERSE": 4, "VANS": 4, "NEW_BALANCE": 3 }
       },
       {
         ko: "부츠",

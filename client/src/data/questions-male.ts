@@ -28,28 +28,28 @@ export const maleQuestions: Question[] = [
         en: "Classic and traditional",
         ja: "クラシックで伝統的な",
         zh: "经典传统",
-        weights: { "RALPH_LAUREN": 5, "BURBERRY": 5, "BROOKS_BROTHERS": 4, "TOMMY_HILFIGER": 3, "ARMANI": 4 }
+        weights: { "RALPH_LAUREN": 5, "BURBERRY": 5, "ARMANI": 4, "HUGO_BOSS": 4, "TOMMY_HILFIGER": 3 }
       },
       {
         ko: "트렌디하고 현대적인",
         en: "Trendy and modern",
         ja: "トレンディでモダンな",
         zh: "时尚现代",
-        weights: { "ZARA": 5, "HM": 4, "TOPSHOP": 3, "MANGO": 3, "COS": 4 }
+        weights: { "ZARA": 5, "HM": 4, "COS": 4, "MANGO": 3, "ARKET": 3 }
       },
       {
         ko: "캐주얼하고 편안한",
         en: "Casual and comfortable",
         ja: "カジュアルで快適な",
         zh: "休闲舒适",
-        weights: { "UNIQLO": 5, "GAP": 4, "MUJI": 4, "AMERICAN_APPAREL": 3, "LEVI": 4 }
+        weights: { "UNIQLO": 5, "GAP": 4, "MUJI": 4, "LEVI": 4, "NIKE": 3 }
       },
       {
         ko: "독창적이고 개성있는",
         en: "Unique and distinctive",
         ja: "独創的で個性的な",
         zh: "独特个性",
-        weights: { "ACNE_STUDIOS": 5, "COMME_DES_GARCONS": 4, "STONE_ISLAND": 4, "OFF_WHITE": 3 }
+        weights: { "ACNE_STUDIOS": 5, "GUCCI": 4, "STONE_ISLAND": 4, "OFF_WHITE": 3, "FEAR_OF_GOD": 3 }
       }
     ]
   },
@@ -65,28 +65,28 @@ export const maleQuestions: Question[] = [
         en: "Almost daily (office worker)",
         ja: "ほぼ毎日（会社員）",
         zh: "几乎每天（上班族）",
-        weights: { "HUGO_BOSS": 5, "ARMANI": 5, "CALVIN_KLEIN": 4, "BROOKS_BROTHERS": 4, "RALPH_LAUREN": 3 }
+        weights: { "HUGO_BOSS": 5, "ARMANI": 5, "CALVIN_KLEIN": 4, "RALPH_LAUREN": 4, "BURBERRY": 3 }
       },
       {
         ko: "가끔 (특별한 행사)",
         en: "Occasionally (special events)",
         ja: "時々（特別な行事）",
         zh: "偶尔（特殊场合）",
-        weights: { "ZARA": 4, "HM": 3, "UNIQLO": 3, "COS": 3, "MANGO": 2 }
+        weights: { "ZARA": 4, "COS": 4, "UNIQLO": 3, "HM": 3, "TOMMY_HILFIGER": 3 }
       },
       {
         ko: "거의 없음 (캐주얼 위주)",
         en: "Rarely (mostly casual)",
         ja: "ほとんどない（カジュアル中心）",
         zh: "很少（主要休闲）",
-        weights: { "UNIQLO": 4, "GAP": 4, "LEVI": 4, "NIKE": 3, "ADIDAS": 3 }
+        weights: { "UNIQLO": 5, "GAP": 4, "LEVI": 4, "MUJI": 4, "NIKE": 3 }
       },
       {
         ko: "전혀 없음 (자유로운 직업)",
         en: "Never (freelance/creative work)",
         ja: "全くない（自由な職業）",
         zh: "从不（自由职业）",
-        weights: { "STUSSY": 4, "SUPREME": 3, "FEAR_OF_GOD": 3, "STONE_ISLAND": 3, "ACNE_STUDIOS": 4 }
+        weights: { "ACNE_STUDIOS": 5, "STONE_ISLAND": 4, "FEAR_OF_GOD": 4, "OFF_WHITE": 3, "GUCCI": 3 }
       }
     ]
   },
@@ -102,28 +102,28 @@ export const maleQuestions: Question[] = [
         en: "Sneakers/Athletic shoes",
         ja: "スニーカー/アスレチックシューズ",
         zh: "运动鞋/球鞋",
-        weights: { "NIKE": 5, "ADIDAS": 5, "CONVERSE": 4, "VANS": 4, "NEW_BALANCE": 4, "GOLDEN_GOOSE": 3 }
+        weights: { "NIKE": 5, "ADIDAS": 5, "CONVERSE": 4, "VANS": 4, "NEW_BALANCE": 4 }
       },
       {
         ko: "정장화/드레스 슈즈",
         en: "Dress shoes/Formal shoes",
         ja: "ドレスシューズ/フォーマルシューズ",
         zh: "正装鞋/礼服鞋",
-        weights: { "CHURCH": 5, "ALLEN_EDMONDS": 4, "JOHNSTON_MURPHY": 3, "COLE_HAAN": 3, "CLARKS": 3 }
+        weights: { "HUGO_BOSS": 5, "ARMANI": 4, "RALPH_LAUREN": 4, "BURBERRY": 3, "CALVIN_KLEIN": 3 }
       },
       {
         ko: "부츠",
         en: "Boots",
         ja: "ブーツ",
         zh: "靴子",
-        weights: { "DR_MARTENS": 5, "TIMBERLAND": 4, "RED_WING": 4, "FRYE": 3, "STONE_ISLAND": 3 }
+        weights: { "STONE_ISLAND": 5, "ACNE_STUDIOS": 4, "DR_MARTENS": 4, "LEVI": 3, "GAP": 3 }
       },
       {
         ko: "로퍼/슬립온",
         en: "Loafers/Slip-ons",
         ja: "ローファー/スリッポン",
         zh: "乐福鞋/一脚蹬",
-        weights: { "GUCCI": 4, "PRADA": 4, "TOD": 4, "COMMON_PROJECTS": 3, "BOTTEGA_VENETA": 3 }
+        weights: { "GUCCI": 5, "PRADA": 4, "TOMMY_HILFIGER": 3, "RALPH_LAUREN": 3, "COS": 3 }
       }
     ]
   },
@@ -139,14 +139,14 @@ export const maleQuestions: Question[] = [
         en: "Black, white, gray",
         ja: "ブラック、ホワイト、グレー",
         zh: "黑白灰",
-        weights: { "COS": 5, "MUJI": 4, "ACNE_STUDIOS": 4, "COMMON_PROJECTS": 3, "LEMAIRE": 3 }
+        weights: { "COS": 5, "MUJI": 5, "ACNE_STUDIOS": 4, "ARKET": 4, "UNIQLO": 3 }
       },
       {
         ko: "네이비, 브라운, 베이지",
         en: "Navy, brown, beige",
         ja: "ネイビー、ブラウン、ベージュ",
         zh: "海军蓝、棕色、米色",
-        weights: { "RALPH_LAUREN": 5, "BURBERRY": 4, "BROOKS_BROTHERS": 4, "TOMMY_HILFIGER": 3, "J_CREW": 3 }
+        weights: { "RALPH_LAUREN": 5, "BURBERRY": 5, "TOMMY_HILFIGER": 4, "GAP": 3, "LEVI": 3 }
       },
       {
         ko: "밝은 색상 (블루, 레드 등)",
