@@ -153,14 +153,14 @@ export const maleQuestions: Question[] = [
         en: "Bright colors (blue, red, etc.)",
         ja: "明るい色（ブルー、レッドなど）",
         zh: "明亮色彩（蓝色、红色等）",
-        weights: { "TOMMY_HILFIGER": 4, "POLO_RALPH_LAUREN": 4, "LACOSTE": 3, "NIKE": 3, "ADIDAS": 3 }
+        weights: { "TOMMY_HILFIGER": 5, "NIKE": 4, "ADIDAS": 4, "POLO_RALPH_LAUREN": 3, "GAP": 3 }
       },
       {
         ko: "어두운 색상 (올블랙 등)",
         en: "Dark colors (all black, etc.)",
         ja: "暗い色（オールブラックなど）",
         zh: "深色（全黑等）",
-        weights: { "RICK_OWENS": 5, "YOHJI_YAMAMOTO": 4, "COMME_DES_GARCONS": 4, "STONE_ISLAND": 3 }
+        weights: { "ACNE_STUDIOS": 5, "STONE_ISLAND": 4, "COS": 4, "MUJI": 3, "UNIQLO": 2 }
       }
     ]
   },
@@ -176,7 +176,7 @@ export const maleQuestions: Question[] = [
         en: "Very frequently (5+ times per week)",
         ja: "非常に頻繁に（週5回以上）",
         zh: "非常频繁（每周5次以上）",
-        weights: { "LULULEMON": 5, "NIKE": 5, "ADIDAS": 5, "UNDER_ARMOUR": 4, "PATAGONIA": 3 }
+        weights: { "NIKE": 5, "ADIDAS": 5, "UNDER_ARMOUR": 4, "LULULEMON": 4, "NEW_BALANCE": 3 }
       },
       {
         ko: "가끔 (주 2-3회)",
@@ -197,7 +197,7 @@ export const maleQuestions: Question[] = [
         en: "Never",
         ja: "全くしない",
         zh: "从不",
-        weights: { "ACNE_STUDIOS": 3, "LEMAIRE": 3, "APC": 3, "BOTTEGA_VENETA": 2, "SAINT_LAURENT": 2 }
+        weights: { "RALPH_LAUREN": 4, "BURBERRY": 4, "HUGO_BOSS": 3, "ARMANI": 3, "TOMMY_HILFIGER": 2 }
       }
     ]
   },
@@ -227,14 +227,14 @@ export const maleQuestions: Question[] = [
         en: "Quality and durability",
         ja: "品質と耐久性",
         zh: "质量和耐用性",
-        weights: { "PATAGONIA": 5, "LEVI": 4, "STONE_ISLAND": 4, "ARC_TERYX": 3, "COMMON_PROJECTS": 3 }
+        weights: { "LEVI": 5, "STONE_ISLAND": 4, "GAP": 4, "CARHARTT": 3, "UNIQLO": 3 }
       },
       {
         ko: "독특한 디자인",
         en: "Unique design",
         ja: "ユニークなデザイン",
         zh: "独特设计",
-        weights: { "COMME_DES_GARCONS": 5, "ACNE_STUDIOS": 4, "RICK_OWENS": 4, "ISSEY_MIYAKE": 3 }
+        weights: { "ACNE_STUDIOS": 5, "OFF_WHITE": 4, "FEAR_OF_GOD": 4, "STONE_ISLAND": 3, "GUCCI": 3 }
       }
     ]
   },
@@ -331,7 +331,7 @@ export const maleQuestions: Question[] = [
         en: "Wool/Cashmere",
         ja: "ウール/カシミア",
         zh: "羊毛/羊绒",
-        weights: { "HERMÈS": 5, "LORO_PIANA": 4, "BRUNELLO_CUCINELLI": 4, "BURBERRY": 4, "RALPH_LAUREN": 3 }
+        weights: { "BURBERRY": 5, "RALPH_LAUREN": 5, "HUGO_BOSS": 4, "ARMANI": 4, "TOMMY_HILFIGER": 3 }
       },
       {
         ko: "기능성 소재",
@@ -361,14 +361,14 @@ export const maleQuestions: Question[] = [
         en: "Very high - follow latest trends",
         ja: "非常に高い - 最新トレンドをフォロー",
         zh: "非常高 - 追随最新趋势",
-        weights: { "BALENCIAGA": 5, "OFF_WHITE": 4, "FEAR_OF_GOD": 4, "JACQUEMUS": 3, "STONE_ISLAND": 3 }
+        weights: { "OFF_WHITE": 5, "FEAR_OF_GOD": 5, "STONE_ISLAND": 4, "ACNE_STUDIOS": 4, "GUCCI": 3 }
       },
       {
         ko: "높음 - 브랜드와 품질 중시",
         en: "High - value brands and quality",
         ja: "高い - ブランドと品質を重視",
         zh: "较高 - 重视品牌和质量",
-        weights: { "ACNE_STUDIOS": 5, "COS": 4, "LEMAIRE": 4, "APC": 3, "COMMON_PROJECTS": 3 }
+        weights: { "ACNE_STUDIOS": 5, "COS": 5, "ARKET": 4, "MUJI": 4, "UNIQLO": 3 }
       },
       {
         ko: "보통 - 기본적인 스타일 유지",
@@ -382,7 +382,7 @@ export const maleQuestions: Question[] = [
         en: "Low - only seek comfort",
         ja: "低い - 快適さのみ追求",
         zh: "较低 - 只追求舒适",
-        weights: { "UNIQLO": 4, "GAP": 4, "HANES": 3, "FRUIT_OF_THE_LOOM": 3, "MUJI": 3 }
+        weights: { "UNIQLO": 5, "GAP": 5, "MUJI": 4, "LEVI": 3, "TARGET": 2 }
       }
     ]
   },
@@ -435,14 +435,14 @@ export const maleQuestions: Question[] = [
         en: "Frequently (watch, necklace, rings, etc.)",
         ja: "頻繁に着用（時計、ネックレス、指輪など）",
         zh: "经常佩戴（手表、项链、戒指等）",
-        weights: { "GUCCI": 5, "HERMÈS": 4, "CARTIER": 4, "TIFFANY": 3, "ROLEX": 5 }
+        weights: { "RALPH_LAUREN": 5, "HUGO_BOSS": 4, "ARMANI": 4, "BURBERRY": 3, "TOMMY_HILFIGER": 3 }
       },
       {
         ko: "시계 정도만",
         en: "Just a watch",
         ja: "時計程度のみ",
         zh: "只戴手表",
-        weights: { "ROLEX": 4, "OMEGA": 3, "SEIKO": 3, "CASIO": 2, "APPLE": 3 }
+        weights: { "NIKE": 4, "ADIDAS": 3, "UNIQLO": 3, "GAP": 3, "CASIO": 2 }
       },
       {
         ko: "가끔 착용",

@@ -139,28 +139,28 @@ export const femaleQuestions: Question[] = [
         en: "Black, white, gray",
         ja: "ブラック、ホワイト、グレー",
         zh: "黑白灰",
-        weights: { "COS": 5, "ACNE_STUDIOS": 4, "THE_ROW": 4, "TOTEME": 4, "LEMAIRE": 3 }
+        weights: { "COS": 5, "ACNE_STUDIOS": 5, "ARKET": 4, "MUJI": 4, "UNIQLO": 3 }
       },
       {
         ko: "베이지, 크림, 브라운",
         en: "Beige, cream, brown",
         ja: "ベージュ、クリーム、ブラウン",
         zh: "米色、奶油色、棕色",
-        weights: { "TOTEME": 5, "THE_ROW": 4, "KHAITE": 4, "LEMAIRE": 3, "BOTTEGA_VENETA": 3 }
+        weights: { "RALPH_LAUREN": 5, "BURBERRY": 4, "TOMMY_HILFIGER": 4, "GAP": 3, "LEVI": 3 }
       },
       {
         ko: "파스텔 톤",
         en: "Pastel tones",
         ja: "パステルトーン",
         zh: "粉彩色调",
-        weights: { "GANNI": 5, "OTHER_STORIES": 4, "ARKET": 3, "MONKI": 3, "WEEKDAY": 3 }
+        weights: { "ZARA": 5, "HM": 4, "MANGO": 4, "COS": 3, "ARKET": 3 }
       },
       {
         ko: "밝고 화려한 색상",
         en: "Bright and vibrant colors",
         ja: "明るく鮮やかな色",
         zh: "明亮鲜艳的颜色",
-        weights: { "VERSACE": 4, "MOSCHINO": 4, "KENZO": 3, "GANNI": 3, "JACQUEMUS": 3 }
+        weights: { "GUCCI": 5, "PRADA": 4, "VERSACE": 4, "DIOR": 3, "CHANEL": 3 }
       }
     ]
   },

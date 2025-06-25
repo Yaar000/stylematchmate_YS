@@ -3,8 +3,10 @@ import type { Question } from '../hooks/useQuiz';
 
 export function calculateBrandScores(answers: Answer[], questions: Question[]): Record<string, number> {
   const brandScores: Record<string, number> = {};
-  const brandCounts: Record<string, number> = {};
+  const brandWeightedCounts: Record<string, number> = {};
+  const brandMaxWeight: Record<string, number> = {};
 
+  // Calculate weighted scores with emphasis on higher weights
   answers.forEach(answer => {
     const question = questions.find(q => q.id === answer.questionId);
     if (!question) return;
@@ -12,24 +14,36 @@ export function calculateBrandScores(answers: Answer[], questions: Question[]): 
     const selectedOption = question.options[answer.optionIndex];
     if (!selectedOption) return;
 
-    // Add weights from the selected option to brand scores
+    // Process weights with emphasis on higher values
     Object.entries(selectedOption.weights).forEach(([brandId, weight]) => {
       if (!brandScores[brandId]) {
         brandScores[brandId] = 0;
-        brandCounts[brandId] = 0;
+        brandWeightedCounts[brandId] = 0;
+        brandMaxWeight[brandId] = 0;
       }
-      brandScores[brandId] += weight;
-      brandCounts[brandId] += 1;
+      
+      // Square the weight to emphasize higher values more
+      const emphasizedWeight = weight * weight;
+      brandScores[brandId] += emphasizedWeight;
+      brandWeightedCounts[brandId] += weight;
+      brandMaxWeight[brandId] = Math.max(brandMaxWeight[brandId], weight);
     });
   });
 
-  // Normalize scores by the number of questions that mentioned each brand
-  // This prevents brands mentioned in more questions from having unfair advantage
+  // Apply final scoring with preference for brands with higher individual weights
+  const finalScores: Record<string, number> = {};
+  
   Object.keys(brandScores).forEach(brandId => {
-    if (brandCounts[brandId] > 0) {
-      brandScores[brandId] = (brandScores[brandId] / brandCounts[brandId]) * brandCounts[brandId];
-    }
+    const totalScore = brandScores[brandId];
+    const avgWeight = brandWeightedCounts[brandId] / answers.length;
+    const maxWeight = brandMaxWeight[brandId];
+    
+    // Bonus multiplier for brands with consistently high weights (4-5)
+    const consistencyBonus = maxWeight >= 4 ? 1.5 : 1.0;
+    const avgWeightBonus = avgWeight >= 3 ? 1.2 : 1.0;
+    
+    finalScores[brandId] = totalScore * consistencyBonus * avgWeightBonus;
   });
 
-  return brandScores;
+  return finalScores;
 }
