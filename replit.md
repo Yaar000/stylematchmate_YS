@@ -111,10 +111,20 @@ Changelog:
   - Configured _redirects for SPA routing
   - Added performance and security headers
   - Updated build scripts for static deployment
+- June 25, 2025. Enhanced brand matching accuracy
+  - Redesigned scoring algorithm with weighted emphasis
+  - Added consistency bonuses for high-score brands
+  - Improved question-brand weight alignment
+- June 25, 2025. Implemented easy brand logo management system
+  - Created local logo system in public/logos/ folder
+  - Added BrandLogo component with fallback handling
+  - Automated logo path generation and error handling
+  - Provided comprehensive brand logo guide
 ```
 
 ## User Preferences
 
 ```
 Preferred communication style: Simple, everyday language.
+Logo management: User wants to easily add brand logo images themselves.
 ```

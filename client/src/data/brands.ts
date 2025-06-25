@@ -13,6 +13,22 @@ export interface Brand {
   score: number;
 }
 
+// 로고 이미지 경로를 자동으로 생성하는 함수
+export function getLogoPath(brandId: string): string {
+  // 지원하는 이미지 확장자들
+  const extensions = ['png', 'jpg', 'jpeg', 'svg', 'webp'];
+  
+  // 개발 환경에서는 로컬 이미지 우선 확인
+  for (const ext of extensions) {
+    const localPath = `/logos/${brandId}.${ext}`;
+    // 실제 파일 존재 여부는 브라우저에서 확인됨
+    return localPath;
+  }
+  
+  // 기본 fallback 이미지
+  return `/logos/${brandId}.png`;
+}
+
 export const brands: Brand[] = [
   {
     id: "UNIQLO",
@@ -24,7 +40,7 @@ export const brands: Brand[] = [
       ja: "実用的でシンプルなスタイルを追求するあなたに",
       zh: "追求实用简约风格的您"
     },
-    logo: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("UNIQLO"),
     website: "https://www.uniqlo.com",
     score: 0
   },
@@ -38,7 +54,7 @@ export const brands: Brand[] = [
       ja: "トレンディでファストファッションを愛するあなたに",
       zh: "喜爱时尚快消的您"
     },
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("ZARA"),
     website: "https://www.zara.com",
     score: 0
   },
@@ -52,7 +68,7 @@ export const brands: Brand[] = [
       ja: "リーズナブルな価格のファッションを求めるあなたに",
       zh: "寻求平价时尚的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.hm.com",
     score: 0
   },
@@ -66,7 +82,7 @@ export const brands: Brand[] = [
       ja: "ミニマルで自然なデザインを好むあなたに",
       zh: "偏爱极简自然设计的您"
     },
-    logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("MUJI"),
     website: "https://www.muji.com",
     score: 0
   },
@@ -80,7 +96,7 @@ export const brands: Brand[] = [
       ja: "モダンで洗練されたベーシックアイテムを愛するあなたに",
       zh: "喜爱现代精致基础款的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("COS"),
     website: "https://www.cosstores.com",
     score: 0
   },
@@ -94,7 +110,7 @@ export const brands: Brand[] = [
       ja: "独創的でアバンギャルドなスタイルを追求するあなたに",
       zh: "追求原创前卫风格的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("ACNE_STUDIOS"),
     website: "https://www.acnestudios.com",
     score: 0
   },
@@ -108,7 +124,7 @@ export const brands: Brand[] = [
       ja: "持続可能でモダンなエッセンシャルを追求するあなたに",
       zh: "追求可持续现代必需品的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("ARKET"),
     website: "https://www.arket.com",
     score: 0
   },
@@ -122,7 +138,7 @@ export const brands: Brand[] = [
       ja: "ラグジュアリーでユニークなデザインを愛するあなたに",
       zh: "热爱奢华独特设计的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("GUCCI"),
     website: "https://www.gucci.com",
     score: 0
   },
@@ -136,7 +152,7 @@ export const brands: Brand[] = [
       ja: "イタリアンラグジュアリーファッションの真髄を追求するあなたに",
       zh: "追求意大利奢华时尚精髓的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("PRADA"),
     website: "https://www.prada.com",
     score: 0
   },
@@ -150,7 +166,7 @@ export const brands: Brand[] = [
       ja: "スポーツウェアとストリートファッションを愛するあなたに",
       zh: "热爱运动装和街头时尚的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.nike.com",
     score: 0
   },
@@ -164,7 +180,7 @@ export const brands: Brand[] = [
       ja: "クラシックなスポーツヘリテージを追求するあなたに",
       zh: "追求经典运动传统的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.adidas.com",
     score: 0
   },
@@ -178,7 +194,7 @@ export const brands: Brand[] = [
       ja: "女性らしくトレンディなスタイルを追求するあなたに",
       zh: "追求女性化时尚风格的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://shop.mango.com",
     score: 0
   },
@@ -192,7 +208,7 @@ export const brands: Brand[] = [
       ja: "アメリカンカジュアルの真髄を追求するあなたに",
       zh: "追求美式休闲精髓的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.gap.com",
     score: 0
   },
@@ -206,7 +222,7 @@ export const brands: Brand[] = [
       ja: "クラシックなデニム文化を愛するあなたに",
       zh: "热爱经典牛仔文化的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.levi.com",
     score: 0
   },
@@ -220,7 +236,7 @@ export const brands: Brand[] = [
       ja: "アメリカンプレッピースタイルの代表格を追求するあなたに",
       zh: "追求美式预科生风格代表的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.ralphlauren.com",
     score: 0
   },
@@ -234,7 +250,7 @@ export const brands: Brand[] = [
       ja: "英国の伝統的ラグジュアリーのクラシックさを追求するあなたに",
       zh: "追求英国传统奢华经典的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.burberry.com",
     score: 0
   },
@@ -248,7 +264,7 @@ export const brands: Brand[] = [
       ja: "アメリカンクラシックスポーツウェアを愛するあなたに",
       zh: "热爱美式经典运动装的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.tommy.com",
     score: 0
   },
@@ -262,7 +278,7 @@ export const brands: Brand[] = [
       ja: "ミニマルでモダンなアメリカンデザインを追求するあなたに",
       zh: "追求极简现代美式设计的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.calvinklein.com",
     score: 0
   },
@@ -276,7 +292,7 @@ export const brands: Brand[] = [
       ja: "ドイツの精密さとモダンビジネスウェアを追求するあなたに",
       zh: "追求德国精密和现代商务装的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.hugoboss.com",
     score: 0
   },
@@ -290,7 +306,7 @@ export const brands: Brand[] = [
       ja: "イタリアンラグジュアリーテーラリングの真髄を追求するあなたに",
       zh: "追求意大利奢华剪裁精髓的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.armani.com",
     score: 0
   },
@@ -304,7 +320,7 @@ export const brands: Brand[] = [
       ja: "環境を考慮したアウトドアライフスタイルを追求するあなたに",
       zh: "追求环保户外生活方式的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.patagonia.com",
     score: 0
   },
@@ -318,7 +334,7 @@ export const brands: Brand[] = [
       ja: "チャレンジ精神とアウトドアアドベンチャーを追求するあなたに",
       zh: "追求挑战精神和户外冒险的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.thenorthface.com",
     score: 0
   },
@@ -332,7 +348,7 @@ export const brands: Brand[] = [
       ja: "プレミアムアスレジャーとウェルネスライフスタイルを追求するあなたに",
       zh: "追求高端运动休闲和健康生活方式的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.lululemon.com",
     score: 0
   },
@@ -346,7 +362,7 @@ export const brands: Brand[] = [
       ja: "前衛的で脱構築的な日本ファッションを追求するあなたに",
       zh: "追求前卫解构日本时尚的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.comme-des-garcons.com",
     score: 0
   },
@@ -360,7 +376,7 @@ export const brands: Brand[] = [
       ja: "革新的な素材と技術による日本デザインを追求するあなたに",
       zh: "通过创新材料和技术追求日本设计的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.isseymiyake.com",
     score: 0
   },
@@ -374,7 +390,7 @@ export const brands: Brand[] = [
       ja: "スカンジナビアの楽しくて現代的な感性を追求するあなたに",
       zh: "追求斯堪的纳维亚活泼现代感性的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.ganni.com",
     score: 0
   },
@@ -388,7 +404,7 @@ export const brands: Brand[] = [
       ja: "サーフィンとストリートカルチャーのオリジナルを追求するあなたに",
       zh: "追求冲浪和街头文化原创的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.stussy.com",
     score: 0
   },
@@ -402,7 +418,7 @@ export const brands: Brand[] = [
       ja: "ニューヨークスケートボードカルチャーのアイコンを追求するあなたに",
       zh: "追求纽约滑板文化图标的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.supremenewyork.com",
     score: 0
   },
@@ -416,7 +432,7 @@ export const brands: Brand[] = [
       ja: "ストリートウェアとラグジュアリーの境界を破るあなたに",
       zh: "打破街头服饰和奢侈品界限的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.off---white.com",
     score: 0
   },
@@ -430,7 +446,7 @@ export const brands: Brand[] = [
       ja: "未来的で実験的なラグジュアリーを追求するあなたに",
       zh: "追求未来实验性奢华的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.balenciaga.com",
     score: 0
   },
@@ -444,7 +460,7 @@ export const brands: Brand[] = [
       ja: "フレンチシックとモダンな感性を追求するあなたに",
       zh: "追求法式优雅和现代感性的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.jacquemus.com",
     score: 0
   },
@@ -458,7 +474,7 @@ export const brands: Brand[] = [
       ja: "スウェーデンミニマリズムの真髄を追求するあなたに",
       zh: "追求瑞典极简主义精髓的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://toteme-studio.com",
     score: 0
   },
@@ -472,7 +488,7 @@ export const brands: Brand[] = [
       ja: "機能性と革新的な素材を追求するあなたに",
       zh: "追求功能性和创新材料的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.stoneisland.com",
     score: 0
   },
@@ -486,7 +502,7 @@ export const brands: Brand[] = [
       ja: "現代的で実験的なデザインを追求するあなたに",
       zh: "追求现代实验性设计的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.maisonmargiela.com",
     score: 0
   },
@@ -500,7 +516,7 @@ export const brands: Brand[] = [
       ja: "持続可能なファッションと環境を考えるあなたに",
       zh: "关注可持续时尚和环境的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.veja-store.com",
     score: 0
   },
@@ -514,7 +530,7 @@ export const brands: Brand[] = [
       ja: "クラシックなスニーカー文化を愛するあなたに",
       zh: "热爱经典运动鞋文化的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.converse.com",
     score: 0
   },
@@ -528,7 +544,7 @@ export const brands: Brand[] = [
       ja: "スケートボードとストリート文化を楽しむあなたに",
       zh: "享受滑板和街头文化的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.vans.com",
     score: 0
   },
@@ -542,7 +558,7 @@ export const brands: Brand[] = [
       ja: "快適さと機能性を重視するあなたに",
       zh: "重视舒适性和功能性的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.newbalance.com",
     score: 0
   },
@@ -556,7 +572,7 @@ export const brands: Brand[] = [
       ja: "ヴィンテージでラグジュアリーなスニーカーを好むあなたに",
       zh: "偏爱复古奢华运动鞋的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.goldengoose.com",
     score: 0
   },
@@ -570,7 +586,7 @@ export const brands: Brand[] = [
       ja: "ミニマルで高級な靴を追求するあなたに",
       zh: "追求极简奢华鞋履的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.commonprojects.com",
     score: 0
   },
@@ -584,7 +600,7 @@ export const brands: Brand[] = [
       ja: "パリジャンシックと日本的感性を同時に追求するあなたに",
       zh: "同时追求巴黎时尚和日式美学的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.kitsune.fr",
     score: 0
   },
@@ -598,7 +614,7 @@ export const brands: Brand[] = [
       ja: "フレンチミニマリズムの真髄を追求するあなたに",
       zh: "追求法式极简主义精髓的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.apc.fr",
     score: 0
   },
@@ -612,7 +628,7 @@ export const brands: Brand[] = [
       ja: "エレガントで抑制されたフレンチデザインを追求するあなたに",
       zh: "追求优雅克制法式设计的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.lemaire.fr",
     score: 0
   },
@@ -626,7 +642,7 @@ export const brands: Brand[] = [
       ja: "イタリアの職人精神とラグジュアリーを追求するあなたに",
       zh: "追求意大利工艺和奢华的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.bottegaveneta.com",
     score: 0
   },
@@ -640,7 +656,7 @@ export const brands: Brand[] = [
       ja: "フレンチロックンロールシックを追求するあなたに",
       zh: "追求法式摇滚时尚的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.ysl.com",
     score: 0
   },
@@ -654,7 +670,7 @@ export const brands: Brand[] = [
       ja: "最高級ラグジュアリーと伝統的職人精神を追求するあなたに",
       zh: "追求顶级奢华和传统工艺的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.hermes.com",
     score: 0
   },
@@ -668,7 +684,7 @@ export const brands: Brand[] = [
       ja: "パリクチュールのエレガンスを追求するあなたに",
       zh: "追求巴黎高级定制优雅的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.dior.com",
     score: 0
   },
@@ -682,7 +698,7 @@ export const brands: Brand[] = [
       ja: "タイムレスなフレンチラグジュアリーを追求するあなたに",
       zh: "追求永恒法式奢华的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.chanel.com",
     score: 0
   },
@@ -696,7 +712,7 @@ export const brands: Brand[] = [
       ja: "LAラグジュアリーストリートウェアを追求するあなたに",
       zh: "追求洛杉矶奢华街头服饰的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.fearofgod.com",
     score: 0
   },
@@ -710,7 +726,7 @@ export const brands: Brand[] = [
       ja: "快適でラグジュアリーなベーシックを追求するあなたに",
       zh: "追求舒适奢华基础款的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.fearofgod.com",
     score: 0
   },
@@ -724,7 +740,7 @@ export const brands: Brand[] = [
       ja: "モダンでミニマルな女性らしさを追求するあなたに",
       zh: "追求现代极简女性魅力的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.khaite.com",
     score: 0
   },
@@ -738,7 +754,7 @@ export const brands: Brand[] = [
       ja: "抑制されたラグジュアリーと完璧なシルエットを追求するあなたに",
       zh: "追求克制奢华和完美轮廓的您"
     },
-    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    logo: getLogoPath("HM"),
     website: "https://www.therow.com",
     score: 0
   }

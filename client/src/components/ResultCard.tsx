@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/hooks/useLanguage';
 import { brands } from '@/data/brands';
+import { BrandLogo } from './BrandLogo';
 import type { QuizResult } from '@shared/schema';
 
 interface ResultCardProps {
@@ -33,11 +34,11 @@ export function ResultCard({ result }: ResultCardProps) {
         
         <Card className="brand-card bg-gradient-to-br from-card to-card/80 shadow-2xl border-2 border-primary/20">
           <CardContent className="p-8">
-            <div className="w-32 h-20 mx-auto mb-6 bg-muted rounded-xl overflow-hidden">
-              <img 
-                src={result.mainBrand.logo} 
-                alt={result.mainBrand.name}
-                className="w-full h-full object-cover"
+            <div className="w-32 h-20 mx-auto mb-6">
+              <BrandLogo 
+                brandId={result.mainBrand.name}
+                brandName={result.mainBrand.name}
+                className="w-full h-full"
               />
             </div>
             
@@ -77,11 +78,11 @@ export function ResultCard({ result }: ResultCardProps) {
             >
               <Card className="brand-card shadow-md hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="w-24 h-16 mx-auto mb-4 bg-muted rounded-lg overflow-hidden">
-                    <img 
-                      src={brand.logo} 
-                      alt={brand.name}
-                      className="w-full h-full object-cover"
+                  <div className="w-24 h-16 mx-auto mb-4">
+                    <BrandLogo 
+                      brandId={brand.name}
+                      brandName={brand.name}
+                      className="w-full h-full"
                     />
                   </div>
                   
