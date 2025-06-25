@@ -86,24 +86,31 @@ The application follows a modern full-stack architecture with clear separation b
 - **Hot Reload**: Both client and server support hot reloading
 - **Environment**: Node.js 20 with ES modules
 
-### Production
-- **Build Process**: 
-  1. Frontend built with Vite to `dist/public`
-  2. Server bundled with ESBuild to `dist/index.js`
-- **Static Assets**: Served from Express in production
-- **Database**: PostgreSQL with Drizzle migrations
-- **Deployment Target**: Configured for autoscale deployment on Replit
+### Production (Cloudflare Pages)
+- **Build Process**: Frontend built with Vite to `dist/`
+- **Static Site**: Pure client-side application with no server dependencies
+- **Routing**: SPA routing handled via `_redirects` file
+- **Performance**: Code splitting and asset optimization for fast loading
+- **Deployment Target**: Optimized for Cloudflare Pages with CDN distribution
 
 ### Configuration
-- **Environment Variables**: DATABASE_URL required for database connection
-- **Ports**: Server runs on port 5000, proxied to port 80 in production
-- **Static Files**: Client assets served from server in production
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist/`
+- **Environment Variables**: NODE_ENV=production
+- **Static Assets**: Cached with optimal headers for performance
+- **Security**: CORS, CSP, and security headers configured
 
 ## Changelog
 
 ```
 Changelog:
 - June 25, 2025. Initial setup
+- June 25, 2025. Optimized for Cloudflare Pages deployment
+  - Converted to static site architecture
+  - Added build optimization with code splitting
+  - Configured _redirects for SPA routing
+  - Added performance and security headers
+  - Updated build scripts for static deployment
 ```
 
 ## User Preferences
