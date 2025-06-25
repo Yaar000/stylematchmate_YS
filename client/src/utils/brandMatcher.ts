@@ -1,4 +1,5 @@
-import type { Answer, Question } from '../data/questions';
+import type { Answer } from '@shared/schema';
+import type { Question } from '../hooks/useQuiz';
 
 export function calculateBrandScores(answers: Answer[], questions: Question[]): Record<string, number> {
   const brandScores: Record<string, number> = {};

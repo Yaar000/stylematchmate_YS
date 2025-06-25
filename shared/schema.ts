@@ -6,6 +6,7 @@ export const answerSchema = z.object({
 });
 
 export const quizResultSchema = z.object({
+  gender: z.enum(['male', 'female']),
   answers: z.array(answerSchema),
   mainBrand: z.object({
     name: z.string(),
@@ -21,5 +22,6 @@ export const quizResultSchema = z.object({
   })),
 });
 
+export type Gender = 'male' | 'female';
 export type Answer = z.infer<typeof answerSchema>;
 export type QuizResult = z.infer<typeof quizResultSchema>;

@@ -1,6 +1,9 @@
 export interface Translation {
   title: string;
   subtitle: string;
+  genderSelect: string;
+  male: string;
+  female: string;
   startButton: string;
   duration: string;
   analyzing: string;
@@ -19,6 +22,9 @@ export const translations: Record<string, Translation> = {
   ko: {
     title: "Fashion Brand Matcher",
     subtitle: "20개의 질문으로 당신의 스타일을 분석하여\n가장 어울리는 패션 브랜드를 찾아드려요",
+    genderSelect: "성별을 선택해주세요",
+    male: "남성",
+    female: "여성",
     startButton: "테스트 시작하기",
     duration: "약 3-5분 소요",
     analyzing: "결과를 분석하고 있어요",
@@ -35,6 +41,9 @@ export const translations: Record<string, Translation> = {
   en: {
     title: "Fashion Brand Matcher",
     subtitle: "Find your perfect fashion brand\nthrough 20 style questions",
+    genderSelect: "Please select your gender",
+    male: "Male",
+    female: "Female",
     startButton: "Start Test",
     duration: "Takes about 3-5 minutes",
     analyzing: "Analyzing your results",
@@ -51,6 +60,9 @@ export const translations: Record<string, Translation> = {
   ja: {
     title: "Fashion Brand Matcher",
     subtitle: "20の質問であなたのスタイルを分析し\n最適なファッションブランドを見つけます",
+    genderSelect: "性別を選択してください",
+    male: "男性",
+    female: "女性",
     startButton: "テスト開始",
     duration: "約3-5分かかります",
     analyzing: "結果を分析しています",
@@ -67,6 +79,9 @@ export const translations: Record<string, Translation> = {
   zh: {
     title: "Fashion Brand Matcher",
     subtitle: "通过20个问题分析您的风格\n找到最适合您的时尚品牌",
+    genderSelect: "请选择您的性别",
+    male: "男性",
+    female: "女性",
     startButton: "开始测试",
     duration: "大约需要3-5分钟",
     analyzing: "正在分析您的结果",

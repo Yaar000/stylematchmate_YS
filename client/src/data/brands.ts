@@ -461,5 +461,285 @@ export const brands: Brand[] = [
     logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
     website: "https://toteme-studio.com",
     score: 0
+  },
+  {
+    id: "STONE_ISLAND",
+    name: "STONE ISLAND",
+    displayName: "스톤 아일랜드",
+    description: {
+      ko: "기능성과 혁신적인 소재를 추구하는 당신",
+      en: "For those who pursue functionality and innovative materials",
+      ja: "機能性と革新的な素材を追求するあなたに",
+      zh: "追求功能性和创新材料的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.stoneisland.com",
+    score: 0
+  },
+  {
+    id: "MM6_MAISON_MARGIELA",
+    name: "MM6 MAISON MARGIELA",
+    displayName: "MM6 메종 마르지엘라",
+    description: {
+      ko: "현대적이고 실험적인 디자인을 추구하는 당신",
+      en: "For those who pursue contemporary and experimental design",
+      ja: "現代的で実験的なデザインを追求するあなたに",
+      zh: "追求现代实验性设计的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.maisonmargiela.com",
+    score: 0
+  },
+  {
+    id: "VEJA",
+    name: "VEJA",
+    displayName: "베자",
+    description: {
+      ko: "지속가능한 패션과 환경을 생각하는 당신",
+      en: "For those who think about sustainable fashion and environment",
+      ja: "持続可能なファッションと環境を考えるあなたに",
+      zh: "关注可持续时尚和环境的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.veja-store.com",
+    score: 0
+  },
+  {
+    id: "CONVERSE",
+    name: "CONVERSE",
+    displayName: "컨버스",
+    description: {
+      ko: "클래식한 스니커즈 문화를 사랑하는 당신",
+      en: "For those who love classic sneaker culture",
+      ja: "クラシックなスニーカー文化を愛するあなたに",
+      zh: "热爱经典运动鞋文化的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.converse.com",
+    score: 0
+  },
+  {
+    id: "VANS",
+    name: "VANS",
+    displayName: "반스",
+    description: {
+      ko: "스케이트보드와 스트리트 문화를 즐기는 당신",
+      en: "For those who enjoy skateboard and street culture",
+      ja: "スケートボードとストリート文化を楽しむあなたに",
+      zh: "享受滑板和街头文化的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.vans.com",
+    score: 0
+  },
+  {
+    id: "NEW_BALANCE",
+    name: "NEW BALANCE",
+    displayName: "뉴발란스",
+    description: {
+      ko: "편안함과 기능성을 중시하는 당신",
+      en: "For those who value comfort and functionality",
+      ja: "快適さと機能性を重視するあなたに",
+      zh: "重视舒适性和功能性的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.newbalance.com",
+    score: 0
+  },
+  {
+    id: "GOLDEN_GOOSE",
+    name: "GOLDEN GOOSE",
+    displayName: "골든 구스",
+    description: {
+      ko: "빈티지하고 럭셔리한 스니커즈를 선호하는 당신",
+      en: "For those who prefer vintage and luxury sneakers",
+      ja: "ヴィンテージでラグジュアリーなスニーカーを好むあなたに",
+      zh: "偏爱复古奢华运动鞋的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.goldengoose.com",
+    score: 0
+  },
+  {
+    id: "COMMON_PROJECTS",
+    name: "COMMON PROJECTS",
+    displayName: "커먼 프로젝츠",
+    description: {
+      ko: "미니멀하고 고급스러운 신발을 추구하는 당신",
+      en: "For those who pursue minimal and luxurious footwear",
+      ja: "ミニマルで高級な靴を追求するあなたに",
+      zh: "追求极简奢华鞋履的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.commonprojects.com",
+    score: 0
+  },
+  {
+    id: "MAISON_KITSUNE",
+    name: "MAISON KITSUNÉ",
+    displayName: "메종 키츠네",
+    description: {
+      ko: "파리지앵 시크와 일본적 감성을 동시에 추구하는 당신",
+      en: "For those who pursue both Parisian chic and Japanese sensibility",
+      ja: "パリジャンシックと日本的感性を同時に追求するあなたに",
+      zh: "同时追求巴黎时尚和日式美学的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.kitsune.fr",
+    score: 0
+  },
+  {
+    id: "APC",
+    name: "A.P.C.",
+    displayName: "아페쎄",
+    description: {
+      ko: "프렌치 미니멀리즘의 정수를 추구하는 당신",
+      en: "For those who pursue the essence of French minimalism",
+      ja: "フレンチミニマリズムの真髄を追求するあなたに",
+      zh: "追求法式极简主义精髓的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.apc.fr",
+    score: 0
+  },
+  {
+    id: "LEMAIRE",
+    name: "LEMAIRE",
+    displayName: "르메르",
+    description: {
+      ko: "우아하고 절제된 프렌치 디자인을 추구하는 당신",
+      en: "For those who pursue elegant and restrained French design",
+      ja: "エレガントで抑制されたフレンチデザインを追求するあなたに",
+      zh: "追求优雅克制法式设计的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.lemaire.fr",
+    score: 0
+  },
+  {
+    id: "BOTTEGA_VENETA",
+    name: "BOTTEGA VENETA",
+    displayName: "보테가 베네타",
+    description: {
+      ko: "이탈리아 장인정신과 럭셔리를 추구하는 당신",
+      en: "For those who pursue Italian craftsmanship and luxury",
+      ja: "イタリアの職人精神とラグジュアリーを追求するあなたに",
+      zh: "追求意大利工艺和奢华的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.bottegaveneta.com",
+    score: 0
+  },
+  {
+    id: "SAINT_LAURENT",
+    name: "SAINT LAURENT",
+    displayName: "생 로랑",
+    description: {
+      ko: "프렌치 로큰롤 시크를 추구하는 당신",
+      en: "For those who pursue French rock and roll chic",
+      ja: "フレンチロックンロールシックを追求するあなたに",
+      zh: "追求法式摇滚时尚的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.ysl.com",
+    score: 0
+  },
+  {
+    id: "HERMÈS",
+    name: "HERMÈS",
+    displayName: "에르메스",
+    description: {
+      ko: "최고급 럭셔리와 전통 장인정신을 추구하는 당신",
+      en: "For those who pursue ultimate luxury and traditional craftsmanship",
+      ja: "最高級ラグジュアリーと伝統的職人精神を追求するあなたに",
+      zh: "追求顶级奢华和传统工艺的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.hermes.com",
+    score: 0
+  },
+  {
+    id: "DIOR",
+    name: "DIOR",
+    displayName: "디올",
+    description: {
+      ko: "파리 쿠튀르의 우아함을 추구하는 당신",
+      en: "For those who pursue the elegance of Parisian couture",
+      ja: "パリクチュールのエレガンスを追求するあなたに",
+      zh: "追求巴黎高级定制优雅的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.dior.com",
+    score: 0
+  },
+  {
+    id: "CHANEL",
+    name: "CHANEL",
+    displayName: "샤넬",
+    description: {
+      ko: "타임리스한 프렌치 럭셔리를 추구하는 당신",
+      en: "For those who pursue timeless French luxury",
+      ja: "タイムレスなフレンチラグジュアリーを追求するあなたに",
+      zh: "追求永恒法式奢华的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.chanel.com",
+    score: 0
+  },
+  {
+    id: "FEAR_OF_GOD",
+    name: "FEAR OF GOD",
+    displayName: "피어 오브 갓",
+    description: {
+      ko: "LA 럭셔리 스트리트웨어를 추구하는 당신",
+      en: "For those who pursue LA luxury streetwear",
+      ja: "LAラグジュアリーストリートウェアを追求するあなたに",
+      zh: "追求洛杉矶奢华街头服饰的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.fearofgod.com",
+    score: 0
+  },
+  {
+    id: "ESSENTIALS",
+    name: "ESSENTIALS",
+    displayName: "에센셜",
+    description: {
+      ko: "편안하고 럭셔리한 베이직을 추구하는 당신",
+      en: "For those who pursue comfortable and luxurious basics",
+      ja: "快適でラグジュアリーなベーシックを追求するあなたに",
+      zh: "追求舒适奢华基础款的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.fearofgod.com",
+    score: 0
+  },
+  {
+    id: "KHAITE",
+    name: "KHAITE",
+    displayName: "카이트",
+    description: {
+      ko: "모던하고 미니멀한 여성스러움을 추구하는 당신",
+      en: "For those who pursue modern and minimal femininity",
+      ja: "モダンでミニマルな女性らしさを追求するあなたに",
+      zh: "追求现代极简女性魅力的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.khaite.com",
+    score: 0
+  },
+  {
+    id: "THE_ROW",
+    name: "THE ROW",
+    displayName: "더 로우",
+    description: {
+      ko: "절제된 럭셔리와 완벽한 실루엣을 추구하는 당신",
+      en: "For those who pursue restrained luxury and perfect silhouette",
+      ja: "抑制されたラグジュアリーと完璧なシルエットを追求するあなたに",
+      zh: "追求克制奢华和完美轮廓的您"
+    },
+    logo: "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+    website: "https://www.therow.com",
+    score: 0
   }
 ];

@@ -21,6 +21,8 @@ function QuizContent() {
     answers,
     isLoading,
     result,
+    gender,
+    setGender,
     startQuiz,
     answerQuestion,
     goBack,
@@ -29,10 +31,14 @@ function QuizContent() {
   } = useQuiz();
   
   const [isAnimating, setIsAnimating] = useState(false);
-  const [currentScreen, setCurrentScreen] = useState<'welcome' | 'quiz' | 'loading' | 'result'>('welcome');
+  const [currentScreen, setCurrentScreen] = useState<'welcome' | 'gender-select' | 'quiz' | 'loading' | 'result'>('welcome');
 
   const handleStartQuiz = () => {
-    startQuiz();
+    setCurrentScreen('gender-select');
+  };
+
+  const handleGenderSelect = (selectedGender: 'male' | 'female') => {
+    setGender(selectedGender);
     setCurrentScreen('quiz');
   };
 
@@ -60,6 +66,8 @@ function QuizContent() {
   const handleGoBack = () => {
     if (currentQuestionIndex > 0) {
       goBack();
+    } else if (currentScreen === 'quiz') {
+      setCurrentScreen('gender-select');
     } else {
       setCurrentScreen('welcome');
     }
@@ -129,6 +137,49 @@ function QuizContent() {
                 <span className="inline-block mr-1">⏱️</span>
                 {t.duration}
               </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Gender Selection Screen */}
+        {currentScreen === 'gender-select' && (
+          <motion.div
+            key="gender-select"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="min-h-screen flex items-center justify-center px-4"
+          >
+            <div className="max-w-md w-full text-center">
+              <h1 className="text-3xl font-bold mb-8 gradient-text">
+                {t.genderSelect}
+              </h1>
+              
+              <div className="space-y-4">
+                <Button
+                  onClick={() => handleGenderSelect('male')}
+                  className="w-full py-6 px-8 rounded-xl font-semibold text-lg bg-blue-500 hover:bg-blue-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  👨 {t.male}
+                </Button>
+                
+                <Button
+                  onClick={() => handleGenderSelect('female')}
+                  className="w-full py-6 px-8 rounded-xl font-semibold text-lg bg-pink-500 hover:bg-pink-600 text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  👩 {t.female}
+                </Button>
+              </div>
+              
+              <Button
+                onClick={() => setCurrentScreen('welcome')}
+                variant="ghost"
+                className="mt-8"
+              >
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                {t.backButton}
+              </Button>
             </div>
           </motion.div>
         )}

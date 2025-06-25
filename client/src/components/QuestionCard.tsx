@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/hooks/useLanguage';
-import type { Question } from '../data/questions';
+import type { Question } from '../hooks/useQuiz';
 
 interface QuestionCardProps {
   question: Question;

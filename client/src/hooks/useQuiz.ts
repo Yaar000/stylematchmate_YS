@@ -1,8 +1,24 @@
 import { useState, useCallback } from 'react';
-import { questions, Question } from '../data/questions';
+import { maleQuestions } from '../data/questions-male';
+import { femaleQuestions } from '../data/questions-female';
 import { brands } from '../data/brands';
 import { calculateBrandScores } from '../utils/brandMatcher';
-import type { Answer, QuizResult } from '@shared/schema';
+import type { Answer, QuizResult, Gender } from '@shared/schema';
+
+export interface Question {
+  id: number;
+  ko: string;
+  en: string;
+  ja: string;
+  zh: string;
+  options: Array<{
+    ko: string;
+    en: string;
+    ja: string;
+    zh: string;
+    weights: Record<string, number>;
+  }>;
+}
 
 export interface QuizState {
   currentQuestionIndex: number;
@@ -10,31 +26,53 @@ export interface QuizState {
   isLoading: boolean;
   result: QuizResult | null;
   shuffledQuestions: Question[];
+  gender: Gender | null;
 }
 
 export const useQuiz = () => {
   const [state, setState] = useState<QuizState>(() => {
-    // Shuffle questions on initialization
-    const shuffled = [...questions].sort(() => Math.random() - 0.5);
     return {
       currentQuestionIndex: 0,
       answers: [],
       isLoading: false,
       result: null,
-      shuffledQuestions: shuffled
+      shuffledQuestions: [],
+      gender: null
     };
   });
 
-  const startQuiz = useCallback(() => {
+  const setGender = useCallback((gender: Gender) => {
+    const questions = gender === 'male' ? maleQuestions : femaleQuestions;
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
-    setState({
+    setState(prev => ({
+      ...prev,
+      gender,
+      shuffledQuestions: shuffled,
+      currentQuestionIndex: 0,
+      answers: [],
+      result: null
+    }));
+  }, []);
+
+  const startQuiz = useCallback((selectedGender?: Gender) => {
+    if (selectedGender) {
+      setGender(selectedGender);
+      return;
+    }
+    
+    if (!state.gender) return;
+    
+    const questions = state.gender === 'male' ? maleQuestions : femaleQuestions;
+    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    setState(prev => ({
+      ...prev,
       currentQuestionIndex: 0,
       answers: [],
       isLoading: false,
       result: null,
       shuffledQuestions: shuffled
-    });
-  }, []);
+    }));
+  }, [state.gender, setGender]);
 
   const answerQuestion = useCallback(async (optionIndex: number) => {
     const currentQuestion = state.shuffledQuestions[state.currentQuestionIndex];
@@ -59,6 +97,7 @@ export const useQuiz = () => {
         .sort((a, b) => b.score - a.score);
 
       const result: QuizResult = {
+        gender: state.gender!,
         answers: newAnswers,
         mainBrand: {
           name: sortedBrands[0].name,
@@ -100,15 +139,23 @@ export const useQuiz = () => {
   }, [state.currentQuestionIndex]);
 
   const resetQuiz = useCallback(() => {
-    startQuiz();
-  }, [startQuiz]);
+    setState(prev => ({
+      ...prev,
+      currentQuestionIndex: 0,
+      answers: [],
+      result: null,
+      gender: null,
+      shuffledQuestions: []
+    }));
+  }, []);
 
   return {
     ...state,
+    setGender,
     startQuiz,
     answerQuestion,
     goBack,
     resetQuiz,
-    progress: (state.currentQuestionIndex / state.shuffledQuestions.length) * 100
+    progress: state.shuffledQuestions.length > 0 ? (state.currentQuestionIndex / state.shuffledQuestions.length) * 100 : 0
   };
 };
