@@ -15,11 +15,24 @@ interface ShareButtonsProps {
 }
 
 export function ShareButtons({ result }: ShareButtonsProps) {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
   const { toast } = useToast();
   const [isSharing, setIsSharing] = useState(false);
 
-  const shareText = `나는 ${result.mainBrand.name}와 ${result.mainBrand.score}% 일치! 패션 브랜드 매칭 테스트를 해보세요!`;
+  const getShareText = () => {
+    switch (currentLanguage) {
+      case 'en':
+        return `I'm ${result.mainBrand.score}% match with ${result.mainBrand.name}! Try the Fashion Brand Matching Test!`;
+      case 'ja':
+        return `私は${result.mainBrand.name}と${result.mainBrand.score}%マッチ！ファッションブランドマッチングテストをお試しください！`;
+      case 'zh':
+        return `我与${result.mainBrand.name}匹配度${result.mainBrand.score}%！来试试时尚品牌匹配测试吧！`;
+      default:
+        return `나는 ${result.mainBrand.name}와 ${result.mainBrand.score}% 일치! 패션 브랜드 매칭 테스트를 해보세요!`;
+    }
+  };
+
+  const shareText = getShareText();
   const shareUrl = window.location.href;
 
   const copyToClipboard = async () => {
@@ -48,8 +61,9 @@ export function ShareButtons({ result }: ShareButtonsProps) {
         },
       });
     } else {
-      // Fallback to URL scheme
-      window.open(`https://story.kakao.com/share?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`);
+      // KakaoTalk mobile app URL scheme
+      const kakaoUrl = `kakaotalk://share/text?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+      window.open(kakaoUrl, '_blank');
     }
   };
 
@@ -67,8 +81,12 @@ export function ShareButtons({ result }: ShareButtonsProps) {
     // WeChat sharing is complex and typically requires their SDK
     // For now, we'll copy the link and show a message
     copyToClipboard();
+    const wechatMessage = currentLanguage === 'zh' ? '链接已复制，请在微信中分享！' :
+                         currentLanguage === 'en' ? 'Link copied! Share it on WeChat!' :
+                         currentLanguage === 'ja' ? 'リンクをコピーしました。WeChatでシェアしてください！' :
+                         '링크가 복사되었습니다. WeChat에서 공유해보세요!';
     toast({
-      description: "링크가 복사되었습니다. WeChat에서 공유해보세요!",
+      description: wechatMessage,
     });
   };
 
@@ -151,7 +169,9 @@ export function ShareButtons({ result }: ShareButtonsProps) {
             className="font-medium"
           >
             <Share2 className="w-4 h-4 mr-2" />
-            공유하기
+            {currentLanguage === 'en' ? 'Share' :
+             currentLanguage === 'ja' ? 'シェア' :
+             currentLanguage === 'zh' ? '分享' : '공유하기'}
           </Button>
         )}
       </div>

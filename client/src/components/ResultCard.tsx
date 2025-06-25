@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/hooks/useLanguage';
+import { brands } from '@/data/brands';
 import type { QuizResult } from '@shared/schema';
 
 interface ResultCardProps {
@@ -9,7 +10,13 @@ interface ResultCardProps {
 }
 
 export function ResultCard({ result }: ResultCardProps) {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
+
+  // Get localized descriptions for brands
+  const getLocalizedDescription = (brandName: string) => {
+    const brand = brands.find(b => b.name === brandName);
+    return brand ? brand.description[currentLanguage] : brandName;
+  };
 
   return (
     <motion.div
@@ -39,7 +46,7 @@ export function ResultCard({ result }: ResultCardProps) {
             </h2>
             
             <p className="text-muted-foreground mb-6 text-lg">
-              {result.mainBrand.description}
+              {getLocalizedDescription(result.mainBrand.name)}
             </p>
             
             <div className="space-y-2">
@@ -87,7 +94,7 @@ export function ResultCard({ result }: ResultCardProps) {
                   </div>
                   
                   <p className="text-sm text-muted-foreground text-center">
-                    {brand.description}
+                    {getLocalizedDescription(brand.name)}
                   </p>
                 </CardContent>
               </Card>
